@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Visualizador de Tablas Interactivo</title>
+
+    <!-- Tipografía & Iconos -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <!-- ---------- Encabezado ---------- -->
+    <header>
+      <h1>
+       Visualizador  Interactivo
+      </h1>
+      <p>
+        Explora cómo una simple hoja de cálculo puede transformarse en experiencias de datos ricas,
+        dinámicas y fáciles de comprender. ¡Pasa el cursor y descubre!
+      </p>
+    </header>
+
+    <!-- ---------- Carrusel estilo Netflix ---------- -->
+    <section class="carousel" id="carousel">
+      <!-- Tarjeta 1 -->
+      <div class="card" data-index="0">
+        <img src="./Assets/facilitador-buscador.png" alt="Tabla dinámica" />
+        <div class="info">
+          <h3>Buscador de datos optimizado</h3>
+          <p>
+            Este facilitador simplifica la búsqueda de datos en Excel, evitando modificaciones
+            accidentales. Es útil en call centers para acceder rápido a la información.
+          </p>
+        </div>
+      </div>
+
+      <!-- Tarjeta 2 -->
+      <div class="card" data-index="1">
+        <img src="./Assets/facilitador-buscador-especifico.png" alt="Tabla dinámica" />
+        <div class="info">
+          <h3>Buscador de datos específico V2</h3>
+          <p>
+            Mejora la precisión en la búsqueda de datos dentro de Excel mediante filtros avanzados.
+          </p>
+        </div>
+      </div>
+
+      <!-- Tarjeta 3 -->
+      <div class="card" data-index="2">
+        <img src="./Assets/facilitador-buscador-por-columnas.png" alt="Kanban desde Excel" />
+        <div class="info">
+          <h3>Buscador por columnas específicas</h3>
+          <p>
+            Filtra por columnas puntuales como códigos o nombres para obtener datos más rápidos.
+          </p>
+        </div>
+      </div>
+
+      <!-- Tarjeta 4 -->
+      <div class="card" data-index="3">
+        <img src="./Assets/glosario.png" alt="Glosario interactivo" />
+        <div class="info">
+          <h3>Glosario interactivo</h3>
+          <p>
+            Consulta términos fácilmente. Ideal para estudiantes y entornos técnicos.
+          </p>
+        </div>
+      </div>
+
+      <!-- Tarjeta 5 -->
+      <div class="card" data-index="4">
+        <img src="./Assets/glosario-por-temas.png" alt="Glosario temático" />
+        <div class="info">
+          <h3>Glosario temático</h3>
+          <p>
+            Organiza conceptos por categorías para facilitar la navegación educativa.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ---------- VISOR ---------- -->
+    <div class="viewer" id="viewer">
+      <div class="viewer-header">
+        <button id="backBtn">
+          <i class="fa-solid fa-chevron-left"></i> Inicio
+        </button>
+        <h2 id="viewerTitle"></h2>
+        <button id="nextBtn">
+          Siguiente <i class="fa-solid fa-chevron-right"></i>
+        </button>
+      </div>
+      <iframe id="viewerFrame" title="Visualización"></iframe>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
